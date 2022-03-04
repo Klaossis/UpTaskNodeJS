@@ -1,16 +1,11 @@
 doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="/css/normalize.css")
-        link(rel="stylesheet", href="/css/app.css")
-        title #{nombrePagina}
+        include partials/header
     body 
         header.barra
             h1 UpTask - Administrador de Proyectos
-            a(href="#") Cerrar sesión
+            a(href="/cerrar-sesion") Cerrar sesión
 
         main.contenedor
             aside.contenedor-proyectos 
@@ -29,3 +24,4 @@ html(lang="en")
             block contenido
 
             // pre= vardump(proyectos);
+        script(src="/dist/bundle.js") 
